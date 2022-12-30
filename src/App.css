@@ -25,9 +25,16 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: hsl(202, 97%, 70%);
 }
-
+.bgg{
+  background-color: hsl(24, 92%, 66%);
+  color: aliceblue;
+}
+.ntt{
+  display:flex;
+  flex-direction: column;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

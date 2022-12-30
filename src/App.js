@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import React from 'react';
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import './App.css';
+import AddEdit from './pages/AddEdit';
+import Index from './Components/Index'
+ 
+import Footer from './Components/Footer';
+import About from './pages/About';
+import Medicine from './pages/Medicine';
+import Home from './pages/Home';
+import Registration from './pages/Registration';
+import LoginPage from './pages/LoginPage';
+
+import SearchDataForm from './pages/SearchDataForm'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+   <Router>
+    <Index/>
+  
+   
+    <Routes>
+    <Route   path='/' element={<Home/>} />
+    <Route   path='/home' element={<Home/>} />
+    <Route path='/about' element={<About/>} />
+    <Route   path='/medicine' element={<Medicine/>} />
+    <Route   path='/addcontact' element={<AddEdit/>} />
+    <Route path='/about' element={<About/>} />
+    
+ 
+    
+		<Route path='/Registration' element={<Registration/>} />
+		<Route path='/LoginPage' element={<LoginPage/>} />
+    
+    <Route path='/SearchDataForm' element={<SearchDataForm/>}/>
+    </Routes>
+    <Footer/>
+    </Router>
+   );
 }
 
 export default App;
